@@ -65,7 +65,6 @@ class App extends Component {
   };
   render() {
     const { images, loading, error, disabled, largeImageURL } = this.state;
-    console.log(loading)
     return (
       <>
         <FindForm onSubmit={this.handlerSubmitForm} />
@@ -78,7 +77,7 @@ class App extends Component {
           {loading && <Spiner/>}
           {disabled && (
             <Modal onClose={this.closeModalWindow}>
-              <img src={largeImageURL} alt="Large Image" />
+              <img src={largeImageURL} alt="Large Img" />
             </Modal>
           )}
         </section>
